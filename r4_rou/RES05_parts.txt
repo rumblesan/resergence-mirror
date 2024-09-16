@@ -1,0 +1,56 @@
+RES05 - Bi-Directional Router
+
+Quant   PCB Part	Substitute Part		Mouser Part
+
+#Semis:
+1	2N3638		BC328-16	625-BC328-16
+1	2N3566		PN3566		512-PN3566
+
+1	M3401		LM3900		595-LM3900N
+3	CD4007AE	NTE4007		526-NTE4007
+
+
+IC Sockets:
+4	14 pin
+
+Resistors:
+9	1k
+3	22k
+2	2k2
+1	10k
+6	1m5
+2	8k2
+
+Caps:
+1	10n
+
+Power Header:
+1	0.100
+
+Jacks:
+12	3.5mm
+
+Power: 
++/-12V (or +/-15V)
+
+
+PCB connections:
+A = A1/A2 select input (1)
+C = A2 (1)
+B = A1 (1)
+D = B (1)
+
+E = A1/A2 select input (2)
+F = A2 (2)
+G = A1(2)
+H = B (2)
+
+I = A1/A2 select input (3)
+J = A2 (3)
+K = A1 (3)
+L = B (3)
+
+W = 0V
+X = +12v (or +15V)
+Y = not used
+Z = -12v (or -15V)

@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+ <TITLE>Resergence</TITLE>
+ <META name="description" content="vcwm KIT INSTRUCTIONS">
+ <META name="keywords" content="Serge">
+</HEAD>
+<BODY bgcolor="#FFFFFF" link="#FF3366" alink="#FF0000" vlink="#990033" text="#000000">
+<center>
+<table width="600"><tr><td>
+<img width=261 height=400 src="dusg_kit_panel.gif" border=0 align="right">
+<p>
+<H3>Dual Universal Slope Generator</H3>
+<p>
+Parts for Kit
+<ul>
+<li>4 Black Banana Jacks
+<li>4 Blue Banana Jacks
+<li>4 Red Banana Jacks
+<li>12 Star Washers for Banana Jacks
+<li>2 1P3T Switches (three position)
+<li>6 Linear Potentiometers w/nut &amp; lockwashers
+<li>6 Knobs
+<li>10 Shoulder Washers
+<li>220" #22 Insulated Hook-up Wire (stranded)
+<li>10" #20 Bare Hook-up Wire (solid)
+<li>2 LED Kits
+<li>1 SLOPE 114 PC Board
+</ul>
+<p>&nbsp;
+<br clear="all">
+<p>
+<img width=278 height=500 src="dusg_kit_wire.gif" border=0 align="left" hspace=10>
+<p>
+Patch the END pulse to the TRIG IN jack. Turn the RISE and FALL knobs fully CW. Patch the OUTPUT into an audio mixer or Output Module to monitor the output. There should be a 5000 Hz triangle wave present which can be changed to a sawtooth wave of lower frequency by turning down either the RISE or
+FALL knob. The frequency and timbre will depend upon the settings and the shape as set by the relationship between the Rise and Fall times.
+<p>
+Patch the OUTPUT of the DSG into the control voltage input of an oscillator and listen for the proper shape as the RISE and FALL knobs are turned down to longer times.
+<p>
+Check for proper VC action by patching a control voltage from a processor or other source into the VC In jack. Note the effect on the Rise, the Fall, and the Rise+Fall times with the position of the switch. Check that a voltage into the IV/oct IN will produce a doubling of frequency (halving of the Rise and Fall times) for each volt applied.
+<p>
+The DSG may not track as well as the NTO's and PCO's when used as an oscillator.
+<p>
+Remove the patch from the END and TRIG IN jacks, and apply a control voltage from a keyboard, Stopped Function, or Stapped Random Voltage Generator. Turn the RISE and FALL knobs all the way up (clockwise, and apply the output to the control input of an oscillator. The signal should be the same as the input. As the RISE and FALL knobs are turned down, there should be a portamento or slowing Effect on the changing stepped voltage.
+<p>
+The DSG can be used as a simple envelope generator, a low frequency oscillator, pulse generator, or in a variety of other applications. As an envelope generator, the unit can be triggered in two different ways:
+<ol>
+<li>Connect a trigger pulse to the TRIG IN jack. When a pulse is applied here, an envelope defined by the RISE and FALL knobs will be produced which goes from 0 to +5 volts. If a second trigger is received before the envelope has finished, it will not re-initiate the envelope. Using a pulse train into this input, the DSG can be used as a frequency divider, or sub-harmonic generator. A waveshape and a pulse from the END jack will, be produced for each pulse applied to the TRIG IN jack as long as the total envelope time is thorter than the pulse period.
+<p>
+If the envelope time is slightly longer than the pulse period, then the DSG wil I only be triggered on alternate pulses, producing a division of two. If the envelope is slightly longer than two pulse periods, then it will only be triggered on every third pulse, producing a division by three, and so on.
+<li>With a gate signal into the IN jack, an envelope will be produced which begins to rise at a rate set by the RISE knob tb a level equal to the gate level. The level will remain at this level as long as the gate is present: an envelope with sustain.
+<p>
+When the gate level drops back to zero at its end, the envelope will fall at the rate set by the FALL knob. If the gate level rises before the end of the FALL cycle, the output will rise again, rising toward the gate level, at a rate set by the RATE knob. Multiple gate signals will re-initiate the envelope, even if the envelope has not completed its cycle back to zero volts.
+<p>
+A positive signal applied to the IN jack will always over-ride any trigger at the TRIG IN jack.
+</ol>
+<p>
+The DSG can be used as a slew limiting processor to change discrete voltage steps into gliding voltages (portamento). Voltages from a keyboard, sequencer, or other sources can be applied to the IN jack, and the RISE and FALL knobs will now determine the rate of glide in the positive and negative direction, independently.
+<p>
+The slopes from the DSG are linear (equal voltages per unit of time), but they can be altered using feedback. If the OUTPUT is patched to the VC IN jack, then the slope can be given an exponential or a logarithmic shape determined by the amount of feedback set by the processing knob. Since both the RISE and FALL can be switched to be controlled separately or together, the slope of either or both can be shaped using this technique. This is useful for producing slow, gradual amplitude changes with the Equal Power VCA modules.
+<p>
+If the TRIG IN jack is connected to the TRIG OUT jack, the DSG will oscillate with a waveform and frequency set by the RISE and FALL knobs. A series of pulses will appear at the TRIG OUT jack, and the duty cycle (the time the pulse is high compared to when it is low in each cycle) is set by the RISE and FALL knobs. The FALL knob determine how long the pulse is low. When the DSG is in the RISE part of the cycle or when the output is zero or less, the output of the TRIG OUT will be high. In some applications, a pulse with a very long duty cycle will cause erratic triggering in other modules. If such a symptom occurs, try increasing the FALL time and decreasing the RISE time to get the same pulse rate.
+<p>
+The DSG may be used as a positive peak follower by setting the RISE time to minimum (full CW) and applying an audio signal to the IN jack. Adjust the FALL knob for a compromise between response time and the best filtering of the audio component at the DSG output. If the FALL time is turned to minimum, and the RISE knob adjusted for optimum response time and filtering, then the unit will function as an envelope, follower-producing a negative envelope corresponding to the negative peaks ofthe input audio signal.
+<p>
+Adjustments on the DSG board are set to obtain a 0 to +5 volt level when the unit is cycling, producing a 1OOHz triangle wove. An oscilloscope is required for this adjustment. This should not need to be adjusted unless components are replaced.
+
+
+
+<p>
+<a href="../index.html#kit">back</a>
+<p>
+</td></tr></table>
+</center>
+<br>
+<br>
+<br>
+<br>&nbsp;
+</BODY>
+</HTML>

@@ -1,0 +1,35 @@
+RES10 - Peak & Trough
+(dual modules: 2x Peak, 2x Through)
+
+Semis:
+
+2	2N3565		
+2	2N3566
+4	2N4248		
+24	1n4148
+
+Almost any general purpose substitutions
+will work for the transistors & diodes.
+
+Resistors:
+10	2k2
+2	15k
+2	150k
+2	220k
+
+Caps:
+3	100n				
+75-MKT1826410064
+
+Power Header:
+1	0.100							
+
+Jacks:
+20	3.5mm
+
+Power: 
++/-12V or +/-15V
+W = 0V
+X = +12v (or +15V)
+Y = not used
+Z = -12v (or -15V)

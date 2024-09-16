@@ -1,0 +1,81 @@
+RES04 - Envelope Generator
+
+	Board part	Subst.		Mouser
+Semis:
+1	MC3401		LM3900		595-LM3900N
+1	LM3900				595-LM3900N
+1	BC547				512-BC547
+4	2N3565		BC547		512-BC547
+1	2N3638		BC328-16	625-BC328-16
+1	2N3566		PN3566		512-PN3566		
+1	2N3391A				512-2N3391A
+2	2N4248		BC557		512-BC557 
+6	1N4148				78-1N4148
+
+IC Sockets:
+2	14 pin				575-199314
+
+Caps:
+1	220pF				140-50N5-221J-TB
+1	470n				75-MKT1826447064
+4	100n				75-MKT1826410064
+1	10n				75-MKT1826310014
+1	100pF				140-50N5-101J-TB
+
+Resistors:
+7	33k				271-33k
+2	1M				271-1M
+4	470R				271-470
+2	1M5				271-1.5M			
+7	470k				271-470k
+2	82k				271-82k
+5	100k				271-100k
+1	220R				271-220
+1	2k2				271-2.2k
+2	1k				271-1k
+2	6k8				271-6.8k
+2	68k				271.68k
+2	330k				271-330k
+2	10M				291-10M
+1	15k				271-15k
+1	3k3				271-3.3k
+1	33R				271-33
+2	22k				271-22k
+
+Power Header:
+2	0.100				538-22-23-2041
+
+Jacks:
+9	3.5mm				16PJ135
+
+Trimpots:
+1	10k				323-5000-10k
+1	25k				PT10V-25K		
+
+Pots:
+3	25k				313-1000-25K
+1	25k (centre detent)		313-2000-25K
+
+Power: 
++12V or (+15V) and +6V
+
+PCB connections:
+
+A = start input
+B = Window pulse output
+C = envelope output
+D = End pulse output
+E = cycle input
+F = Hold input
+G = Duration CV
+H = Window size CV
+
+LA = LED Anode
+LC = LED Cathode
+
+Q = not used
+U = not used (0v)
+W = 0v
+X = +12v
+Y = +6v
+Z = not used (-12V)

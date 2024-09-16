@@ -1,0 +1,23 @@
+From:  sasami@h... 
+Date:  Sun Jan 12, 2003  9:28 am
+Subject:  Re: [resergence] scaling and gain
+
+I have one installed in my regular synth. At the moment I don't recall the
+overall gain possible, though I am sure it goes over unity gain. You should
+be able to increase the gain by reducing the resistor feeding the wiper of
+each pot. 
+
+Ken
+
+
+>Hi all,
+>I think I've read that the dual processor has some gain at both 
+>ends. I mean each pot goes beyond unity gain. Is this true?
+
+>>It would be an important feature for me to have a x2 gain or so... 
+
+>I'll use 5Vp-p and 10Vp-p CVs, so some gain welcome
+
+>>Any of you built any dual proc yet?
+
+>>Fernando>>>

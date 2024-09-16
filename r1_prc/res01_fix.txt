@@ -1,0 +1,18 @@
+Message 545
+From:   sasami@hotkey.net.au 
+Date:  Wed Nov 12, 2003  5:17 am
+Subject:  Re: Think I found a PCB problem on your RES01
+
+All resergents note: Peter has found a blunder on the 1" variant of RES01:
+
+>Ken - Look at your board. You've got a tiny little unmarked hole and pad in
+>between pins 5 and 6 of the op amp, which is not only shorting the + and -
+>inputs of the second half of the 072 together, it's shorting them both to
+>ground (which is pulling the output of the first op amp to ground
+>naturally).
+
+Weird! It's not on the earlier run - an accidental keystroke perhaps?
+Just separate the two IC pads from each other - use the other IC for
+reference if you need to.
+
+Ken

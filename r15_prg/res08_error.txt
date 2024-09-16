@@ -1,0 +1,22 @@
+From:   sasami@h... 
+Date:  Wed Feb 19, 2003  12:16 pm
+Subject:  Re: [resergence] Re: Schematics uploaded 
+
+> Speaking of the RES08 programmer schematic; though it should be 
+> quite obvious to all, there is a mistake in that schematic. The 330K 
+> resistor connected to pin 7 of the TL072 in the "Summer" circuit 
+> should in fact be 330 ohms!
+
+So obvious I never even looked! In fact, I use 220R here, for two reasons 
+- the earlier Serges use 220R rather than 330R, and more significantly, I have
+thousands of 220R here. 
+
+> Otherwise you'd get VERY little drive 
+> current and the average 33K input impedance of most modules could 
+> only be driven to 1/11th of what they should be.
+
+Rather like installing 1M where you need 15R and vice versa. I've done that
+before (why can't I hear an output from that speaker? 1M in series instead
+of 15R)
+
+Ken

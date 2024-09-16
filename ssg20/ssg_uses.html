@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+	<title>Resergence :: Cellar :: SSG 20 uses</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" rev="stylesheet" href="../../mainstyle.css" type="text/css" media="all" />
+</head>
+<body>
+<p>
+<br /><span class="back2cellar">&larr; <a href="index_ssg20.html">back to the SSG 20</a></span>
+</p>
+
+<h2>SSG20 <span class="subtitle">Using the Smooth and Stepped Function Generator</span></h2>
+
+<p>Compiled from several messages on the board... (2001-2004)<br />
+<small>Converted to a legible &amp; printable html format by Guy D2, June 2009</small></p>
+<p>&nbsp;</p>
+<div id="content" style="width:600px;">
+<p>
+MSG822<br />
+From:  John Papiewski<br />
+Date:  Sun Oct 7, 2001  4:56 am<br />
+Subject:  SSG hijinx pt. 1 (longish) <br />
+<br />
+Well, some of the recent message here have prompted me to look at the
+SSG with a little more detail.<br />
+</p>
+<p>
+The SSG is of course the Smooth and Stepped Generator module. It
+consists of two sub-modules, the top being the Smooth section, the
+bottom is the Stepped section. The outputs are tied together with a
+comparator at the CUPL. jack - this gives a HIGH if the smooth output is
+greater and a LOW if it isn't. *** CAUTION *** HIGH at CUPL is ~ 10VDC,
+LOW is ~ -10VDC. This is fine for use as a trigger but be careful when
+using it as a control voltage.... you won't hurt the Serge but if you're
+using it to control a VCA for example you may destroy your speakers and
+bring plaster raining down on your head from shattered walls.
+</p>
+
+<p>The Smooth section is a VC lag processor with some interesting additions:</p>
+<ol>
+<li>Hold input. When this goes high the output no longer tracks the
+input but is held at the same level that was present when Hold went high.
+</li>
+<li>Cycle. This is similar to GATE on the DSG but not the same thing.
+It is normally not HIGH but LOW (-10V) The Rate knob determines the rate of lag. 
+At zero rotation the *rate* is low, so that translates to a lot of lag.</li>
+</ol>
+
+<p>The Stepped section is a sample-and-hold, also with interesting additions:</p>
+<ol>
+<li>A rate knob. This determines how big each step is at the Stepped output. 
+Full rotation = big steps, zero rotation = very tiny steps.</li>
+<li>Cycle jack. This is also normally LOW (-10V). More on this in another installment.</li>
+</ol>
+
+<p>
+The stepped section can serve as an extremely high quality
+sample-and-hold --- MOTM's sample and hold claims a droop rate of about
+1mv per second - in other words, if you do a single sample driving a VCO
+at 1 volt per octave, then hold it and just listen without resampling
+you should be able to hear a VCO's tone drop perceptibly, without any
+trouble.<br />
+An informal test I did measured &gt; 10mv droop in 400 seconds on
+the SSG. Other listening tests bear this out.
+</p>
+<p>&nbsp;</p>
+<p>First, some simple SSG applications:</p>
+<ol>
+<li><b>Linear Glide</b><br />
+Patch the output of a sequencer or some other stepwise DC source into
+the Smooth input, then patch the Smooth output to an oscillator. See
+how turning the Rate control varies how fast the glide goes. Technical
+note: in this application the glide has a linear slope so you will hear
+a constant gliding rate from the oscillator (for a given Rate setting
+the volts/second gliding thru will be constant, it won't be faster or
+slower at the beginning or the end of the glide). In other words,
+perfectly nice and even.<br /><br /></li>
+<li><b>Exponential Glide</b><br />
+Same patch as above, but now also run a short patch cord between Smooth
+out and its VC Rate jack. Turn the VC rate knob clockwise so the
+control voltage is affecting the Rate to some degree. Now the glide
+should speed up at the end, depending on the position of the VC rate
+knob.<br /><br /></li>
+<li><b>VC LFO (triangle) or VCO</b><br />
+Run a short patch cord from IN to CYCLE. You should see the LED go from
+dim to bright to dim in a nice smooth progression.<br />
+Patch SMOOTH OUT into a PCO or NTO and hear the pitch rise and fall.
+Vary Rate to make it faster or slower. Use VC Rate jack &amp; knob to make
+the frequency voltage controlled.<br />
+Patch SMOOTH OUT into your audio output path, whatever it is. You can
+use SMOOTH as a low-end audio VCO. Note that tracking &amp; stability are
+NOT as good as PCO, NTO or DSG in this application, but it does give you
+an extra audio oscillator in a pinch. This is a triangle wave.<br /><br /></li>
+<li><b>VC LFO (square) or CLOCK or VCO</b><br />
+Same basic patch as #3. Instead of taking the signal from SMOOTH OUT,
+mult a banana plug into the patch cord connecting IN and CYCLE. This is
+a square wave that jumps from +10VDC to -10VDC approximately. As in #3
+you can use this as an LFO for control voltage applications or as an
+audio square wave. Additionally it can be used to clock a sequencer or
+other module that needs a trigger or clock source.<br />
+Note: if you use it as a trigger for the Stepped module it creates two
+triggers for every cycle. I don't know why exactly but this is what
+I've observed. As in #3 you can vary the frequency with a control
+voltage.<br /><br /></li>
+<li><b>Lowpass Filter/Lowpass Gate</b><br />
+Same patch as #1. Instead of patching a DC control voltage into the
+input, patch an audio source in, say, any PCO waveform. Send SMOOTH OUT
+to your audio output path. Notice that the sound is more or less intact
+at 100% rotation of the Rate knob, and as you turn Rate counterclockwise
+the harmonics and harshness get filtered and Smoothed out. Keep turning
+Rate counterclockwise, the sound will disappear altogether. So you can
+use this to filter harsh harmonics out of audio, or to create an unusual
+filtered effect. Use the VC rate knob and jack to make this filtering
+effect voltage controllable.<br />
+You can employ this effect to create an audio Gate. What's a Gate? A
+gate is a general name for a device that lets you either permit or close
+off an audio signal. That's usually what you use a VCA for, and VCA's
+are very high quality examples of gates. You can use this patch,
+especially under Voltage Control, as an unusual substitute VCA: First,
+set the Rate knob at around 10 o'clock to 12 o'clock, just so your audio
+is no longer audible at the output. Now send a note envelope from DSG,
+DTG, or Envelope Generator to the VC rate jack, with the VC rate knob
+turned sufficiently high. You are creating low quality unusual
+envelopes where the harmonics are varying with amplitude. Using
+harmonic rich input, you have an unusual effect. Using purer input such
+as sine or triangle wave yields a more usual or typical result.<br /><br /></li>
+<li><b>Sample and Hold</b><br />
+Now we'll use the Smooth section to create a sample and hold effect!
+Send a varying signal from LFO or Random Source into Smooth In. Using a
+DSG or DTG create a rectangular clock pulse with a 99% duty cycle, that
+is, mostly 'on,' with a tiny 'off' part. Send that pulse into Smooth
+HOLD. Turn Smooth Rate fully clockwise. Send Smooth Out to a VCO or
+some other module that needs a control voltage. Play with the DSG
+rise/fall times and Smooth Rate. While HOLD is low the Smooth section
+takes a 'sample', when HOLD is high that sample is held.</li>
+</ol>
+<p>
+This should be enough to get you going for a while!<br />
+More will follow later.
+</p>
+<p>John P.</p>
+
+<hr />
+
+<p>
+Message 832<br />
+From:  John Papiewski<br />
+Date:  Wed Oct 24, 2001  3:39 am<br />
+Subject:  SSG hijinx part 2 ... long<br />
+<br />
+Here's a few more things from the SSG trick bag:
+</p>
+<p>
+First, a correction to the coupler thing! The COUPLER goes HIGH if the STEPPED OUT 
+voltage is greater than SMOOTHOUT. The catalog sheds no light on this but that's what my measurements
+say.
+</p>
+<ol>
+<li><b>Pointy wave generator</b><br />
+Patch CYCLE to IN on the Smooth generator, then also patch SMOOTH OUT to VC RATE. 
+Mult another banana into SMOOTH OUT and use it for CV or audio. Instead of generating 
+triangle waves with linear sides you're making exponential pointy waves. Vary RATE and 
+VC RATE for different effects.<br /><br /></li>
+
+<li><b>Straightforward Sample-and-Hold, periodic.</b><br />
+Send the output of any oscillator or LFO to the Stepped section's IN jack. 
+Patch up a clock using a DSG and send its trigger pulse to the SAMPLE jack. Turn the 
+Stepped RATE knob fully clockwise. Patch STEPPEDOUT into the CV input of an audio oscillator. 
+Watch how the the STEPPEDOUT LED flashes brighter and dimmer in time with the clock pulse. Note
+how the combination of clock pulse rate and LFO frequency affects the stream of voltages coming 
+out of Stepped.<br /><br /></li>
+
+<li><b>Straightforward Sample-and-Hold, random</b><br />
+Use the setup in #2 but instead of using an oscillator or LFO to feed the IN jack, use a noise 
+source or S/H SOURCE. Now no matter how fast or slow you run your DSG clock, you will have random 
+pitches coming out of your audio VCO.<br /><br /></li>
+
+<li><b>Squashed Sample-and-Hold</b><br />
+Use the setup for #2 or #3, vary the Stepped section's RATE knob. Note that as you turn the knob 
+counterclockwise the amount of each step becomes less and less. The RATE knob slew-limits how fast the
+sample-and-hold can change. Given enough time the maximum high and low points will still be hit but each 
+step will be more modest. At fullcounterclockwise rotation step size is inaudible - I can't hear it, can you? 
+At settings over 50% you can get interesting subtle ultra-microtonal variations.<br /><br /></li>
+
+<li><b>Loony Tunes &amp; Merry Melodies</b> (&trade; AOL-TIME-WARNER ;-)<br />
+Patches #2 &amp; #3 are perfect input for a quantizer if you have one. Note that in setup #2 you have 
+interesting repeating patterns but the patterns inevitably have some kind of drift, unless you know the clock
+and the LFO are sync'd together somehow. A quantizer won't eliminate the drift but will turn it into something 
+melodic. Patch #3 is fun using a quantizer also, but instead of producing pretty repeating patterns you'll get 
+crazy notes all over the place.<br /><br /></li>
+
+<li><b>Autoerotic Sample-and-Hold.</b><br />
+Well, since you can patch the Smooth section as a square wave pulsegenerator, you can use that pulse to trigger 
+the SAMPLE input of the Stepped side. Strangely though, for every cycle of the square wave you get TWO evenly 
+spaced triggers... so the clock rate for the Smooth pulsegenerator is doubled if it's used as an S/H trigger.<br /><br /></li>
+
+<li><b>Zero-crossing detector.</b><br />
+Noting that the COUPLER output goes high if STEPPED OUT is greater than SMOOTH OUT, you can use this as a simple 
+spare comparator. Patch any AC coupled signal into Smooth IN and take the COUPLER out to trigger or do something... 
+every time Smooth IN goes NEGATIVE, if nothing's going into Stepped IN and Stepped's essentially unused, that satisfies the
+condition of Stepped being GREATER, and the COUPLER goes HIGH...again<br />
+PLEASE NOTE that due to the wide voltage swing of the COUPLER output,take great care using it for audio and CV applications!
+Note also, you don't need to send SMOOTH OUT or STEPPED OUT anywhere in this application.<br /><br /></li>
+
+<li><b>Up/Down staircase generator.</b><br />
+Patch Stepped's CYCLE to IN. Note that, unlike doing this with a DSG orthe Smooth section, you're not getting a repeating cycle. 
+Now send aclock pulse to SAMPLE. Turn the RATE knob fully clockwise. You can patch STEPPED OUT to your audio VCO again. 
+It will be a somewhat jerky rising and falling staircase, a staircase that rises stepwise to a maximum then falls stepwise to a 
+minimum. Now rotate RATE counterclockwise... you will hear the number of steps per cycle increase, and the size of each step 
+decrease proportionately. So you'll be hearing lots of itty bitty steps rising to a peak, then falling off to a minimum. 
+Very cute. At full counterclockwise rotation of RATE the steps will be inaudibly tiny... it will simply sound like a smooth
+rising and falling like a nice smooth sided triangle LFO. Now vary the clock rate going into SAMPLE and see how that changes 
+the output. The size of the steps of the staircase depends on RATE, and the speed of the steps depends on the clock going 
+into SAMPLE.<br /><br /></li>
+
+</ol>
+<p>
+Well, taking the 6 applications in the first installment with the 8 in this one brings us to 14 applications of the SSG - that is, 
+ONE TWO-PART SERGE MODULE.<br />
+Just think about that for a minute.<br />
+Now please consider that these are fairly BASIC SSG applications. For the next installment, I will get into some more advanced stuff...
+</p>
+<p>
+Till then, peace to all<br />
+John P.
+</p>
+
+<hr />
+
+<p>
+Message 833<br />
+From:  John Papiewski<br />
+Date:  Mon Oct 29, 2001  5:02 am<br />
+Subject:  SSG hijinx pt 3<br /> 
+</p>
+<h4>The Random Source</h4>
+<p>
+In this installment I'll cover a more advanced application of the legendary Serge Smooth &amp; Stepped Generator.<br />
+The Serge catalog entry for the SSG describes the coupler section as being related to another module, the Random Source (RS)... 
+that the RS is in fact a Noise Source internally hooked to an SSG... and that the SSG can be patched up as a Random Voltage Generator... 
+but tantalyzingly and oh-so-typically of Serge (and Buchla, I think) to not say how it's done... at least not in the catalog.<br /><br />
+So what the SSG does is somehow take a random signal and deliver the Random Source's random pulses, random stepped and random smooth signals.
+Doing this is a very handy thing for Blue Funstation owners, or anyone who happens to have a Random Source and an SSG... and has a desire for
+multiple uncorrelated random signals --- in other words, a slow random smooth voltage controlling one vco, a rapid stepped random voltage
+controlling another one at the same time. Or other combinations.
+</p>
+<p>
+First off, an SSG can't be used as a Random Voltage Generator all by itself, it needs a random signal to feed it.
+You need the S/H source of a Serge Noise Source or Random Source.<br /><br />
+Patch it into the IN jack of the Stepped side of the SSG.<br />
+Now patch the COUPLER to SAMPLE of the Stepped side, mult another patch cord into COUPLER, and patch it into the IN jack of the Smooth side. That's it.<br /><br />
+The Smooth random voltages are available at SMOOTH OUT, the stepped ones are at STEPPED OUT, and random pulses are available at the COUPLER
+(which is also patched to SAMPLE and Smooth IN).<br /><br />
+With the Stepped RATE knob at full, varying the RATE knob of the Stepped side changes the rate of BOTH the Smooth and Stepped random voltages.
+This exactly what the Random Source has. Varying the RATE of the Stepped side changes the amplitude of your Smooth and Stepped randomvoltages... 
+so turning the Stepped RATE knob down reduces the amplitude of the signal at the OUT jacks. Of course, the Smooth RATE and the Stepped RATE can be
+voltage-controlled via their respective VC RATE jacks &amp; controls too.<br /><br />
+The fun doesn't stop here though... see what happens if, instead of using the S/H source to feed the SSG, you use an oscillator, or a DSG, or a sequencer...
+</p>
+<p>
+Have fun!<br />
+John P.
+</p>
+
+<hr />
+
+<p>
+Message 3060<br />
+From:  Bob Hearn<br />
+Date:  Thu Nov 4, 2004  5:17 am<br /> 
+Subject:  Re: [SergeModular] Re: Smooth Stepped Cycle Jacks? <br /> 
+</p>
+<p>
+<i>On Nov 3, 2004, at 11:10 AM, Fernando wrote:</i><br /> 
+&gt; A month or so ago I spent some time really grokking the SSG.<br /> 
+&gt; I think I was able to completely satisfy myself on every point about its<br />
+&gt; behavior, even answering some unresolved questions from SMOG. <br />
+&gt; The module really does make sense; all of its apparent strangeness can be explained.<br /> 
+&gt; Please Bob, it would be a pleasure to read an extensive report!<br />
+&gt; Fernando<br />
+</p>
+<p>
+John's SSG posts that you mentioned pretty much constitute the definitive application survey, I think. 
+I didn't find them until after I had done my experimentation. 
+I do have a few things to add to his reports, more about functionality than applications.<br /><br /> 
+Some of this I mentioned before: 
+</p>
+
+<p>1. The Stepped section is really just like the Smooth section (which is a VC lag processor), 
+with some extra input circuitry. The differences are that (1) the slew rate for a given RATE knob setting and VC input is much faster, 
+and (2) the SAMPLE input works as follows: it detects rising edges (but see below), turns them into fixed (very short) duration pulses, 
+then inverts that signal to effectively feed into an internal HOLD input (as on the smooth section). So the Stepped section is normally 
+in a hold state; you release it and let it slew very quickly for a very short duration with a trigger pulse - effectively, this steps 
+it by an amount depending on the RATE knob and VC. The slewing is clear looking at the signals on an oscilloscope. </p>
+
+<p>2. John noted that if you patch the Smooth CYCLE output to Stepped SAMPLE, you get two sample steps per Smooth oscillation period. 
+I also don't know exactly why this is, but there is nothing special about the fact that the signal is coming from CYCLE. 
+Evidently Stepped SAMPLE detects not only rising edges, but also falling edges with a ~20v drop, which is what CYCLE generates when 
+it goes from +10v to -10v. It is rather tricky to generate such a signal externally (processors are nonlinear when the voltages get large, 
+and don't fully add their inputs), but it can be done, and Stepped SAMPLE again triggers on the falling edges as well as the rising ones. 
+This doesn't happen with normal, 5v to 0v falling edges. Also, it's something peculiar to the Stepped module; no other rising edge detectors 
+I've tried (e.g. DSG, sequencer clock) trigger on CYCLE falling edges. Presumably the behavior has to do with the fact that the edges are 
+being turned into short pulses. </p>
+
+<p>3. John also noted that CYCLE is normally low (on both Smooth and Stepped). This is simply because it only goes high when OUTPUT goes below 
+about -1v (on my system, anyway). It goes low again when OUTPUT goes above about 4v. </p>
+
+<p>4. Beware the SSG diagrams in the Gold book, which mistakenly draw CYCLE as an input - it is an output.</p> 
+
+<p>5. I thought I'd seen other posts puzzling over some CYCLE weirdness, but I can't seem to dig them up at the moment. One thing that puzzled 
+me for a while was this: if you feed a square wave into Smooth INPUT, and crank the RATE up enough to get triangle waves, CYCLE just sits at -10v. 
+But if you patch CYCLE to INPUT, it alternates between -10v and 10v. It's like CYCLE somehow alters its behavior based on the fact that it's 
+patched within the SSG. But the answer is simply given by #3 above - an ordinary square wave does not go below 0v, but CYCLE does. There's really 
+nothing weird about CYCLE.</p> 
+
+<p>6. You can make a Random Voltage Generator even without a Noise Source!<br /> 
+John described how to turn the SSG into an RVG, with smooth, stepped, and 
+pulse random voltage outputs. This is also described in the Gold book (page 5-39).<br />
+This is an incredibly cool patch - if you fully understand it, you have got the SSG down.<br /> 
+However, one thing is that that patch requires the S/H source from a Noise Source module (or a Random Source, which 
+includes a Noise Source internally). That signal is a randomly modulated sawtooth wave. The idea is that every time you sample it (unless two 
+sequential times are very close together), you get a random voltage. (Actually the Gold book mistakenly says to use the S/H output, not S/H source - 
+that will not work.) <br />
+Well, it turns out you can make an RVG even without a Noise Source! Just use a regular sawtooth wave instead of the S/H source, say from a PCO. 
+(A DSG would also work.) Set the PCO to high range, with the frequency knob at 12 'clock. Now, this signal is not randomly modulated, so you might 
+think it would not work - you won't get a random voltage when you sample it. But in fact, the overall system is chaotic; the samples you get are 
+actually random, because they are sampled at random intervals - because the patch in fact works! It's circular - the samples are random, because 
+the patch output voltages are random, because the samples are random... but it works. I haven't done the hairy math to ensure that the system will 
+never get locked into a repeating state, but the output looks the same to me as an actual RVG.<br /> 
+In dynamical terms, I believe the cyclic states are unstable. Note that if the sawtooth PCO rate is much faster than 12 o'clock, the patch doesn't work 
+- I think because the signal is changing too fast for the Stepped section to lock onto. This makes sense given #1 above; the Stepped module is actually 
+slewing for a brief period, and not actually sampling. Setting the PCO rate to 12 o'clock roughly matches the S/H source signal's mean frequency, btw. 
+Of course, this is really only useful if you happen to have an SSG but no Noise Source... still, I think it's cool that you can get your randomness 
+for free, as it were. </p>
+
+<p>Bob Hearn</p>
+
+<hr />
+
+<p>Message 3061<br />
+From:  Bob Hearn<br />
+Date:  Thu Nov 4, 2004  6:23 am <br />
+Subject:  Re: [SergeModular] Re: Smooth Stepped Cycle Jacks?</p>
+
+<p>A short addendum to my previous post...</p>
+
+<p>&gt; 2.John noted that if you patch the Smooth CYCLE output to Stepped SAMPLE, <br />
+&gt; you get two sample steps per Smooth oscillation period... <br />
+&gt; Evidently Stepped SAMPLE detects not only rising edges, but also falling <br />
+&gt; edges with a ~20v drop, which is what CYCLE generates when it goes from +10v to -10v. <br /></p>
+
+<p>I just realized this is a feature, not a bug.<br /> 
+If Stepped SAMPLE didn't trigger on 20v falling edges, the Random Voltage Generator would not work, because a new random voltage would not get 
+sampled when the rising Smooth output reached the sampled voltage (causing CUPL, which is patched to SAMPLE, to go from 10v to -10v).<br /> 
+So I think we can assume that Stepped SAMPLE was simply designed to fire on large falling edges, so that the RVG patch would work, and not on 
+small falling edges, so that ordinary pulses give the expected behavior.<br /><br />
+Mystery solved!<br />
+Bob </p>
+
+
+</div>
+
+
+<p>&nbsp;</p>
+<p>
+<span class="update">updated Nov 10 2004</span>
+</p>
+
+<p>&nbsp;</p>
+
+</body>
+</html>
+

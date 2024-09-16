@@ -1,0 +1,15 @@
+Message 1146 of 1147
+From:  sasami@hotkey.net.au 
+Date:  Wed Nov 3, 2004  12:00 pm 
+Subject:  Negative Slew error.  
+
+One of our good brothers had pointed out an error on the Negative Slew 
+resergence board RES09. 
+
+On the bottom LED (near the power supply connector), the LC pad goes to +6V 
+instead of to 0V like it should. 
+
+You'll need to cut a track and jumper it to 0V (and it's associated 100n cap, 
+which is also connected to the wrong spot). 
+
+Ken

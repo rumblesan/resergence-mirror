@@ -1,0 +1,16 @@
+>I went through the PCB layout and found one discrepancy that could cause
+>problems:
+>
+>If you look at the schematic, A3 is supposed to have a 10M and .001mF
+>strapped between pins 8 and 9. Basically there's a gap between the two and
+>pin 9. Easy to fix on the existing layout.
+
+Well spotted. Thanks Romeo.
+
+>I also noticed a diode at the
+>outputs of A2 and A4. Not sure why they're there, but I don't think they
+>would hurt the design.
+
+These are there to generate a common gate output, if needed.
+
+Ken

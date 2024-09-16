@@ -1,0 +1,59 @@
+From:   "phix_it" <phix_it@y...> 
+Date:  Mon Mar 10, 2003  8:36 pm
+Subject:  Ring-Mod Schematic error
+
+Hello Ken, (and all)
+I just took a peak at the 1973 Ring Mod Schematic in 
+the Files section and noticed an error. The 33K resistor attached to 
+pin 3 of the LM307 shouldn't go to ground but rather to the junction 
+between the right side of the X input Capacitor (100n) and the 
+ajoining 68K resistor.
+As it's connected right now you merely have a VCA circuit.
+
+Just thought I should bring it up in case anyone tried building the 
+thing and found it didn't "Ring".
+
+That's all for now.....
+
+Dean.
+---------------------------------------------------------------------
+
+Message 131
+From:  <spr@spridley.freeserve.co.uk> 
+Date:  Tue Mar 11, 2003  6:29 pm 
+Subject:  Re: [resergence] Ring-Mod Schematic error 
+
+> I just took a peak at the 1973 Ring Mod Schematic in 
+> the Files section and noticed an error. The 33K resistor attached to 
+> pin 3 of the LM307 shouldn't go to ground but rather to the junction 
+> between the right side of the X input Capacitor (100n) and the 
+> ajoining 68K resistor. 
+
+Actually I don't think the 33K should be there at all. There should be 
+a link between pin 3 and the 100n/68K junction. The 33K should be present 
+in the VCA but is deleted in the RM. 
+
+Steve
+---------------------------------------------------------------------
+
+Message 132
+From:  "Fahl, Romeo" <rfahl@extensis.com> 
+Date:  Tue Mar 11, 2003  6:55 pm 
+Subject:  RE: [resergence] Ring-Mod Schematic error
+
+Yeah, the schemo is drawn incorrectly, but Ken got the PCB correct. 
+Romeo
+
+---------------------------------------------------------------------
+
+Message 133
+From:  sasami@hotkey.net.au 
+Date:  Wed Mar 12, 2003  4:45 am 
+Subject:  RE: [resergence] Ring-Mod Schematic error
+
+>Yeah, the schemo is drawn incorrectly, but Ken got the PCB correct. 
+
+That will teach me to adapt one piece of artwork to another. 
+The corrected version has been uploaded. 
+
+Ken

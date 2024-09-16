@@ -1,0 +1,93 @@
+body {
+	background-color: white;
+	color: #444;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	outline-width: 0;
+	margin-left: 50px;
+	font: 12px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+h2 {
+	margin-top: 30px;
+	font-size: 17px;
+}
+a {
+	color: #00f;
+	text-decoration: none;
+	/*font-weight: bold;*/
+}
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+a:active {
+	color: black;
+}
+table {
+	border: 1px solid #999;
+	border-collapse: collapse;
+}
+table th, table td {
+	border: 1px solid #ccc;
+	padding: 3px;
+}
+table .leader {
+	font-size: 10px;
+	font-style: italic;
+	text-align: center;
+}
+table th {
+	text-align: left;
+	background-color: #eee;
+	padding: 4px;
+}
+table .spacer {
+	border: none;
+	border-collapse: collapse;
+}
+table tr:hover {
+	background-color: #f9f9ff;
+}
+.note {
+	font-size: 10px;
+	color: #7f7f7f;
+}
+.subtitle {
+	color: #b00;
+	padding-left: 15px;
+}
+.update {
+	color: #666;
+	background-color: #eee;
+	padding: 4px;
+	width: 680px;
+	display: inline-block;
+}
+#content {
+	padding-left: 53px;
+	/*padding-top: 10px;*/
+}
+#content h3 {
+	margin-left: -10px;
+	margin-top: 30px;
+}
+.back2cellar {
+	background-color: #eee;
+	padding: 4px;
+	width: 680px;
+	display: inline-block;
+}
+.quote {
+	width: 600px;
+	display: block;
+	font-family: "Courier New", Courier, mono;
+}
+.quote .doublequote {
+	color: #00f;
+}
+
+del {
+	text-decoration: line-through;
+}

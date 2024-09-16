@@ -1,0 +1,45 @@
+RES11 - Triple Wave-Shaper & Dual Mixer & Modulator(1973 version)
+
+Semis:
+	Board part		Mouser part#
+1	LM3900			595-LM3900N
+2	741			513-NJM741D
+12	1N4148			78-1N4148
+
+IC Sockets:
+1	14 pin			575-199314
+2	8 pin			575-199308
+
+Caps:
+3	100n			75-MKT1826410064
+5	470n			75-MKT1826447064
+3	100pF			140-50N5-101J-TB
+2	470pF			75-1C10C0G471J050B
+3	47n			75-MKT1817347014
+2	10n			75-MKT1826310014
+1	150pF			75-5GAT15				
+
+Resistors:
+8	22k			271-22k
+6	220R			271-220
+14	100k			271-100k
+1	1M			271-1M
+1	2M2			291-2.2M
+9	1M5			271-1.5M
+3	220k			271-220k
+
+Power Header:
+1	0.100			538-22-23-2041
+
+Jacks:
+25	3.5mm			16PJ135
+
+Trimpots:
+3	25k			PT10V-25K
+
+Pots:
+3	25k			313-1000-25K
+10      50k                     313-1000-50k
+
+Power:
++/-12V or +/-15V

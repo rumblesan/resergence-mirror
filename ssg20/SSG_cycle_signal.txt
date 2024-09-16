@@ -1,0 +1,36 @@
+Message 3050
+From:Ê Bob Hearn <yahoo@h...> 
+Date:Ê TueÊNovÊ2,Ê2004Ê 9:46 pm 
+Subject:Ê Re: [SergeModular] Smooth Stepped Cycle Jacks?
+
+It does exactly the same thing. 
+CYCLE is +10v when high, and -10v when low. When the output goes 
+above about 4v, CYCLE goes low, and when the output goes below 
+about -1v, it goes high. (Those numbers seem odd - I wonder if 
+I have some strange power issues? I don't remember noticing 
+that before...) 
+
+To get the stepped section to oscillate this way, though, you 
+also have to supply a stream of pulses to SAMPLE. A month or so 
+ago I spent some time really grokking the SSG. I think I was able 
+to completely satisfy myself on every point about its behavior, 
+even answering some unresolved questions from SMOG. 
+
+The module really does make sense; all of its apparent strangeness 
+can be explained. One interesting thing is that the stepped section 
+is just like the smooth section, except that (1) the slew rate range 
+(knob + cv) is much higher than the smooth section, and (2) SAMPLE 
+rising edges are turned into short, fixed-length pulses, which when 
+inverted become the effective HOLD input. I.e., it doesn't actually 
+step; it just slews very quickly for some short, fixed period when 
+you pulse SAMPLE. 
+
+Bob On Nov 2, 2004, at 11:35 AM, synpro@a... wrote: 
+
+> I know that the Cycle Jack on the upper Smooth section can be patched 
+> into the Smooth In to create an LFO/OSC but can't seem to understand 
+> what the Cycle jack on the lower Stepped section does. 
+
+Thanks. 
+
+> > -A

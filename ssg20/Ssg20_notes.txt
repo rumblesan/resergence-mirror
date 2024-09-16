@@ -1,0 +1,29 @@
+SSG 20 notes, in no particular order:
+
+All part numbers are arbitrary and for our reference only.
+R52 was missed off the layout and added later on the back 
+of the board.  Earlier versions did include this resistor.
+
+When connected as an SSG, pad S is wired directly topad L 
+on the back of the board.
+The circuitry between pads F and T isn't used in the SSG.  
+
+It is slightly different to the circuitry between P and S, 
+which is the same as in the old schematic (VC Slew / S&H).  
+
+I believe the SSG board was used in at least three other 
+modules - Random Voltage Generator, V.C.Slew and the 
+Dual Rate-Controlled S&H, the latter two being long 
+discontinued.  
+
+The F - T circuitry would probably have been used in the 
+Dual R/C S&H.
+
+The SSG20 could be used as a dual V.C. Slew by just missing 
+out the P - S section and wiring the "hold" input straight 
+into pad L.
+
+Steve
+
+Anyone know if the F - T section or the P - S 
+section was used in the RVG?  

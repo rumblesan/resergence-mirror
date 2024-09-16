@@ -1,0 +1,73 @@
+Message 635
+From:  sasami@hotkey.net.au 
+Date:  Mon Feb 9, 2004  5:54 am
+Subject:  RES04 construction/testing report.
+
+Finally I got around to trying out my RES04 PCB. 
+
+Here are my findings 
+
+-The board works as is without correction/modification.
+An LM3900 works fine in the position for the MC3401.
+All transistors on the board have pin-outs that correspond to the original
+epoxy type transistors. This means they have the emitter in the direction
+shown on the 2N4248 with the symbol in its outline. The PN4248 I have are
+reversed - i.e. EBC from the flat face, rather than CBE as used on the PCB.
+As such, you will need to install any affected transistor substitutions in
+backwards with reference to the PCB. You will need to refer to the data for
+the transistors you are using.
+
+DTRIM is used to set the inital cycle speed. Turn RISE and FALL to the
+fasted positions. Adjust DTRIM until you get 4.00 volts on pin 4 of the
+LM3900 (NOT the one marked MC3401).I did this with END patched to CYCLE, 
+while listening to the Window out pulse. This was so I could tun it to 
+the same frequency of one of my genuine modules.
+
+The other trim pot? It is probably to stabilise the HOLD function. I haven't
+dealt with this yet.
+
+There is provision of the PCB for adding a LED to monitor the Envelope Output. 
+The connections are labelled LA (LED Anode) and LC (LED Cathode).
+
+I added an emitter follower to the Window Out to drive a second LED. This
+helps because the Window Out pulse is more or less independent from the rest
+of the envelope generator, apart from being affected by the speed. It stays
+lit when the cycle is over.
+
+Pads
+A = start input
+B = Window pulse output
+C = envlope output
+D = End pulse output
+E = cycle input
+F = Hold input
+G = Duration CV
+H = Window size CV
+LA = LED Anode
+LC = LED Cathode
+
+Q = not used
+U = not used (0v)
+
+W = 0v
+X = +12v
+Y = +6v
+Z = not used (-12v)
+
+To use it as a VCLFO, patch end to cycle, and feed your CV into duration.
+
+Ken
+
+
+Message 636
+From:  sasami@hotkey.net.au 
+Date:  Mon Feb 9, 2004  11:06 am
+Subject:  Re: [resergence] RES04 construction/testing report. 
+
+The other trim pot is to stabilise the HOLD function. Too high, the signal
+drifts, too low and the signal "pulses". I plugged the ENV out into a VCO,
+triggered hold while in an envelope, and adjusted the trimput using the VCO
+tone as a guide.
+
+Ken
+

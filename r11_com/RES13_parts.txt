@@ -1,0 +1,55 @@
+RES13 - Triple Comparator & Schmitt Trigger
+
+	Board part	Subst.		Mouser
+Semis:
+1	MC3401		LM3900		595-LM3900NIC 
+
+Socket:
+1	14 pin				575-199314
+
+Caps:
+3	220pF				140-50N5-221J-TB 
+2	100n				75-MKT1826410064
+
+Resistors:
+4	820k				271-820k
+7	1M				271-1M
+3	220k				271-220k
+6	33k				271-33k
+4	220R				271-220
+3	470k				271-470k
+3	22M				291-22M
+
+Power Header:
+1	0.100				538-22-23-2041
+
+Jacks:
+11	3.5mm				16PJ135
+
+Trimpots:
+1	25k				PT10V-25K
+
+Pots:
+3	25k				313-1000-25K
+
+Power: 
++6V
+
+PCB connections:
+A = 3 + input
+B = 3 ramp input
+C = 3 output
+D = 2 + input
+E = 2 ramp input
+F = 2 output
+G = 1 + input
+H = 1 ramp input
+I = 1 output
+J = Schmitt input
+K = Schmitt output
+
+U = not used (0v)
+W = 0v
+X = not used
+Y = +6v
+Z = not used

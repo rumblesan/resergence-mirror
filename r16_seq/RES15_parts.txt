@@ -1,0 +1,61 @@
+RES 15 - Sequencer
+
+	Board part	Subst.		Mouser
+
+Semis:
+1	4017				511-40171
+1	1N4148				78-1N4148
+1	2N4248		BC557		512-BC557 
+11	2N3565		BC547 (rev pin) 512-BC547
+
+IC Socket:
+1	16 pin				575-199316
+
+Caps:
+1	47pF				75-1C10C0G470J050B
+3	100n				75-MKT1826410064
+
+Resistors:
+2	1k				271-1k
+10	10k				271-10k
+1	33k				271-33k
+3	15k				271-15k
+1	18k				271-18k
+2	22k				271-22k
+10	220R				271-220
+1	10R				271-10
+
+Power Header:
+1	0.100				538-22-23-2041
+
+Jacks:
+13	3.5mm				16PJ135
+
+Reset Switch:
+1	pushbutton (momentary, red)	104-0012
+
+Power: 
++6V
+
+PCB connections:
+A = 1 output
+B = 2 output
+C = 3 output
+D = 4 output
+E = 5 output
+F = 6 output
+G = 7 output
+H = 8 output
+I = 9 output
+J = 10 output
+K = Clock input
+L = Hold input
+M = + to reset switch
+N = From reset switch
+O = Reset input
+
+U = not used (0v)
+W = 0v
+X = not used
+Y = +6v
+Z = not used

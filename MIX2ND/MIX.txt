@@ -1,0 +1,34 @@
+Serge MIX board
+===============
+
+This 1.5" wide second generation board is a 
+multipurpose dual/quad amp/mixer, and was used
+in a wide variety of modules until replaced by
+the 203 MIX and the 2xx (?) AMX boards.
+
+The board is designed so it can be cut in half
+if only part of one is needed.  When used as a 
+full board, the 0v and -12v are linked by tracks 
+but the +12v has to be linked across by joining 
+the X pads on each half.  I guess this is to 
+allow one half to be run off +6v if necessary.
+
+Parts can be omitted or linked out as necessary
+to produce four AC or DC coupled inverting mixers
+or inverting amps, or sections cab be linked (by
+R9) to produce two non-inverting mixers.
+
+
+I've seen this board configured as:
+
+- Dual Audio Mixer
+- Send & Receive
+- Stereo Mixer Panner
+- Preamp
+- Scaling Buffer
+
+and probably as other processors and mixers.
+
+
+
+ 

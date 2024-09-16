@@ -1,0 +1,39 @@
+RES01 - Dual Processor
+
+Semis:
+2	TL072
+4	1N4148
+
+IC Sockets:
+2	8 pin				
+
+Caps:
+2	10uF 25V tant.
+4	100n				
+
+Resistors:
+14	100k
+2	10k
+2	220R
+2	820R
+2	220k
+
+Power Header:
+1	0.100
+
+
+Jacks:
+10	3.5mm				
+
+Pots:
+2	25k		
+8	25k (centre detent)
+ 
+
+Power: 
++/-12V or +/-15V
+
+W = 0V
+X = +12v (or +15V)
+Y = not used
+Z = -12v (or -15V)	

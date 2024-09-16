@@ -1,0 +1,73 @@
+RES16 - Stereo Mixer / High Gain Amps
+
+	Board part			Mouser
+
+Semis:
+2	LM741				513-NJM741D
+2	LM1458				512-LM1458M
+
+IC Sockets:
+4	8 pin				575-199308
+
+Caps:
+2	82pF				140-50N5-820J-TB
+2	22pF				140-50N2-220J-TB
+6	100n				75-MKT1826410064
+2	10n				75-MKT1826310014
+
+Resistors:
+8	100k				271-100k
+10	47k				271-47k
+2	30k				271-30k
+8	330R				271-330
+4	330k				271-330k
+2	22k				271-22k
+8	150k				271-150k
+2	1M				271-1M
+
+Power Header:
+1	0.100				538-22-23-2041
+
+Jacks:
+4 (inputs) 3.5mm			16PJ135
+4 (out)	3.5mm				16PJ135
+
+Pots:
+4 (level in)	50k log			31VJ405	
+4 (pan)	        50k lin (detent)	313-2000-50k
+
+Power: 
++/-12V (or +/-15V)
+
+PCB connections:
+High Gain Amp #1:
+A = input
+B = output
+
+High Gain Amp #2:
+C = input 
+D = output
+
+Stereo Mixer:
+E = input 1
+F = input 2
+G = input 3
+H = input 4
+I, O = pan pot 1 (CCW, CW)
+J, P = pan pot 2 (CCW, CW)
+K, Q = pan pot 3 (CCW, CW)
+M, S = pan pot 4 (CCW, CW)
+N = left output (normal)
+T = right output (normal)
+L = left output (inverted)
+R = right output (inverted)
+LI = aux input (not used in this application)
+RI = aux input (not used in this application)
+Connect Input Jack GND tabs > Pan Pot Wipers > Level Input CW
+
+W = 0v
+X = +12v (or +15v) 
+Y = (not used) 
+Z = -12v (or -15v)
+
+

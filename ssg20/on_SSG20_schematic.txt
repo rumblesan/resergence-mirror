@@ -1,0 +1,22 @@
+Message 280
+From:   "Steve Ridley" <spr@s...> 
+Date:  Sun Aug 3, 2003  12:26 am
+Subject:  Re: [resergence] (unknown)> 
+
+> One last thing....there's a mistake in Ken's "Smooth/Stepped" 
+> schematic. The 470K resistor that goes to pin 2 of the Coupler's 
+> LM741 should in fact connect to the LEFT hand side of that 
+> driving 10K resistor not the Right hand side as it's shown 
+> (hope that makes sense).
+
+I reverse-engineered that schematic, and I'm 99% certain that's how
+it is.  Whether Serge or Rex meant it to be that way is another matter. 
+Pin 2 isn't a virtual earth, so it should still work - I assume it must
+work, otherwise there would be some unhappy SSG users.  There was also 
+a resistor soldered on the back of the same board, where
+they'd either missed one out or decided to add one later, so they're not
+infallible.  
+
+The board was dated '99.   
+
+Steve

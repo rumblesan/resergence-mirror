@@ -1,0 +1,42 @@
+Analog Shift Register
+=====================
+
+Uses the 1075SR board - from 1975 until at least 2000, and probably still in
+use.  The Dual ASR is just two of these boards stacked up behind the panel.
+
+Schematic and other information are available in a Synapse artice, kindly
+provided by Cyndustries here: 
+
+http://www.cyndustries.com/synapse/synapse.cfm?pc=35&folder=sept1976&pic=19
+http://www.cyndustries.com/synapse/synapse.cfm?pc=35&folder=sept1976&pic=20
+http://www.cyndustries.com/synapse/synapse.cfm?pc=35&folder=sept1976&pic=31
+
+The schematic is largely correct, except C1 isn't present and there apepars
+to be no place where it could go - unless Serge used to solder it on the back.
+R19 and C14 are reversed - R19 goes to pin 4 and C14 to pin 2 of the LM3900N,
+but this makes no prectical difference except duting fault-finding.
+
+Pins 6 & 12 of U2 (4066 or 4016) go to 0v
+
+Pins 1, 12 and 13 of the LM3900 are left unconnected.  This would be a
+disaster with any other sort of opamp, but isn't a problem with Norton opamps
+like the LM3900.
+
+Recent version have trivial differences - leave R26 out, replace the CA3140s
+with CA3130AE, and replace the 4066 with 4016BE, but are otherwise as per the
+schematic.
+
+Pad numbering is:
+
+A - Sample In
+B - Output 1
+C - Output 2
+D - Output 3
+E - End Of Cycle/Aux Pulse/Pulse Out
+F - Trigger In/Pulse In
+
+W - 0v
+X - +12v
+
+Note: no -12v supply is needed.
+

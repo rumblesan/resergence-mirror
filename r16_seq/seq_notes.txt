@@ -1,0 +1,40 @@
+Message 608
+From:   "Steve Ridley" <spr@spridley.freeserve.co.uk> 
+Date:  Sat Jan 10, 2004  8:36 pm
+Subject:  Re: [resergence] res15 sequencer question 
+
+> I love the simplicity of the serge seq design.
+> Here is a question, were are the pots for adjesting 
+> the output level?  
+
+On the Programmer modules.  
+A typical early system would have a sequencer and two four-stage programmers. 
+
+> I suppose a pot on each out put leg would be right, 
+> then sum the outs togeter via a op-amp buffer ...?
+
+That would work, or feed the outputs of the sequencer into the Processor module.
+Of course, neither the Programmer or the Dual Processor would give you ten 
+different voltages in a sequence, but if there are diodes on the sequencer outputs
+(later version pcb?) you can connect two or more sequencer outputs to one stage input.
+
+That means you could have a ten note sequence so long as you only had four (or
+whatever) _different_ notes.  For example, plug outputs 1 and 5 to programmer 
+stage 1, outputs 2,4,6 & 8 to stage 2, output 3 to stage 3 and output 7 to 
+stage 4 to produce a useful 8 note sequence.  
+
+Does that make sense?  
+
+> thinking about racking two up in a seperate box sort 
+> like the korg sq-10 sequencer....
+
+There are a few limitations with all 4017 based sequencers, like they reset to 
+the first note so you step to the second note of a sequence on the first clock.
+If you're thinking of building something sophisticated, the 4017 might not be 
+your best option.  If you want simple, it's there. The good things about the 
+4017 in the Serge is it's simple and can be used for a variety of roles, 
+like a sub-octave divider. 
+
+Just my 6p worth...  
+
+Steve

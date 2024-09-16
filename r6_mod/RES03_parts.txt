@@ -1,0 +1,121 @@
+RES03 - Gate (VCA) or Ring
+Ring Application:
+
+	Board part		Mouser			Subst.
+
+Semis:
+1	1N4148			78-1N4148
+2	2N4248			512-BC557		BC557		
+1	2N4250			512-BC559		BC559
+1	LM307			526-NTE937		NTE937
+1	LM3080			526-NTE996		NTE996
+
+IC Sockets:
+2	8 pin 			575-199308
+
+Caps:
+4	100n			75-MKT1826410064
+1	470n			75-MKT1826447064
+1	10n			75-MKT1826310014
+
+Resistors:
+2	22k			271-22k
+3	330R			271-330
+2	68k			271-68k
+4	220k			271-220k
+1	150k			271-150k
+2	18k			271-18k
+2	1k			271-1k
+4	47k			271-47k
+1	2k2			271-2.2k
+
+Power Header:
+2	0.100			538-22-23-2041
+
+Jacks:
+5	3.5mm			16PJ135
+
+Trimpots:
+2	25k			PT10V-25K
+1	100k			323-5000-100k
+
+Pots:
+1	25k			313-1000-25K
+
+Power: 
++/-12V (or +/-15V) and +6V
+
+PCB connections:
+A = not used
+B = VC X
+C = Y
+D = VC Y
+E = X
+F = Out
+U = not used (0v)
+
+W = 0v
+X = +12v (or +15V)
+Y = +6v
+Z = -12v (or -15V)
+
+______________________________________________________
+
+RES03 - Gate (VCA) or Ring
+Gate (VCA) Application:
+
+Semis:
+1	1N4148			78-1N4148
+2	2N4248			512-BC557		BC557
+1	2N4250			512-BC559		BC559
+1	LM307			526-NTE937		NTE937
+1	LM3080			526-NTE996		NTE996 
+
+IC Sockets:
+2	8 pin			575-199308
+
+Caps:
+4	100n			75-MKT1826410064
+1	10n			75-MKT1826310014
+
+Resistors:
+4	22k			271-22k
+3	330R			271-330
+2	68k			271-68k
+4	220k			271-220k
+2	33k			271-33k
+1	15k			271-15k
+2	1k			271-1k
+1	2k2			271-2.2k
+1	18k			271-18k
+
+Power Header:
+2	0.100			538-22-23-2041
+
+Jacks:
+5	3.5mm			16PJ135
+
+Trimpots:
+2	25k			PT10V-25K
+1	100k			323-5000-100k 
+
+Pots:
+1	25k			313-1000-25K
+
+Power: 
++/-12V (or +/-15V) and +6V
+
+PCB connections:
+
+A = CV lin in
+B = CV log in
+C = not used
+D = DC sig in				
+E = AC sig in
+F = Out
+U = not used (0v)
+
+W = 0v
+X = +12v (or +15V)
+Y = +6v
+Z = -12v (or -15V)
